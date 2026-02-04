@@ -14,54 +14,39 @@
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{tocloft}
-\usepackage{array}
-\usepackage{xcolor}
+\usepackage{amsmath} % Added for math
 \usepackage{tikz}
-\usepackage{pdflscape}
-
-% Footnote settings - reset per page
-\usepackage{perpage}
-\MakePerPage{footnote}
 
 % Define colors
 \definecolor{bkblue}{RGB}{0,102,153}
 
-% Formatting - Use TeX Gyre Termes (Linux-compatible Times New Roman clone)
+% Formatting - Use TeX Gyre Termes
 \setmainfont{TeX Gyre Termes}
 \setsansfont{TeX Gyre Heros}
 \setmonofont{TeX Gyre Cursor}
 
-% Main geometry for portrait pages
+% Main geometry
 \geometry{
  a4paper,
  left=2.5cm,
- right=2.5cm,
+ right=2.0cm,
  top=2cm,
  bottom=2cm,
 }
 
-% Set font size to 13pt for main content
+% Font size
 \renewcommand{\normalsize}{\fontsize{13pt}{15.6pt}\selectfont}
 \normalsize
 
-% Paragraph formatting per regulations
-\setlength{\parindent}{1cm}
-\setlength{\parskip}{6pt}
-\linespread{1.3}
-
 % Section formatting
 \titleformat{\section}
-  {\centering\normalfont\fontsize{14}{17}\bfseries\MakeUppercase}
+  {\normalfont\fontsize{14}{17}\bfseries\MakeUppercase}
   {CHƯƠNG \thesection.\ }{0em}{}
 \titlespacing*{\section}{0pt}{12pt}{6pt}
 
 \titleformat{\subsection}
   {\normalfont\fontsize{13}{16}\bfseries}
   {\thesubsection.}{0.5em}{}
-
-\titleformat{\subsubsection}
-  {\normalfont\fontsize{13}{16}\itshape}
-  {\thesubsubsection.}{0.5em}{}
 
 % Page numbering
 \pagestyle{fancy}
@@ -73,294 +58,49 @@
 
 % ============ TRANG BÌA ============
 \begin{titlepage}
-    \newgeometry{left=1.5cm, right=1.5cm, top=1cm, bottom=1cm}
-    
-    % Khung viền xanh kép
-    \begin{tikzpicture}[remember picture, overlay]
-        \draw[bkblue, line width=2pt] 
-            ([shift={(0.8cm,-0.8cm)}]current page.north west) 
-            rectangle 
-            ([shift={(-0.8cm,0.8cm)}]current page.south east);
-        \draw[bkblue, line width=0.5pt] 
-            ([shift={(1cm,-1cm)}]current page.north west) 
-            rectangle 
-            ([shift={(-1cm,1cm)}]current page.south east);
-    \end{tikzpicture}
-    
     \centering
-    
     \vspace*{0.5cm}
     
-    {\fontsize{14}{17}\selectfont \textbf{TRƯỜNG ĐẠI HỌC BÁCH KHOA}}
+    {\fontsize{14}{17}\selectfont \textbf{TRƯỜNG ĐẠI HỌC CỬU LONG}}
     
-    \vspace{0.2cm}
+    \vspace{3cm}
     
-    {\fontsize{14}{17}\selectfont \textbf{ĐẠI HỌC QUỐC GIA -- THÀNH PHỐ HỒ CHÍ MINH}}
-    
-    \vspace{0.3cm}
-    
-    {\color{bkblue} \textbf{------}}
-    
-    \vspace{0.8cm}
-    
-    \includegraphics[height=2.5cm]{images/logo_bk.png}
-    
-    \vspace{1cm}
-    
-    {\fontsize{14}{17}\selectfont \textbf{BÀI TIỂU LUẬN TRIẾT HỌC (MM: AS 5113)}}
-    
-    \vspace{0.3cm}
-    
-    {\fontsize{14}{17}\selectfont \color{bkblue} \textbf{ĐỀ TÀI:}}
-    
-    \vspace{0.2cm}
-    
-    {\fontsize{14}{17}\selectfont \textbf{LỊCH SỬ TRIẾT HỌC PHƯƠNG TÂY: CHỦ NGHĨA KHẮC KỶ}}
-    
-    {\fontsize{14}{17}\selectfont \textbf{VÀ VAI TRÒ CỦA NÓ ĐỐI VỚI ĐỜI SỐNG XÃ HỘI}}
-    
-    \vspace{1.2cm}
-    
-    {\fontsize{13}{16}\selectfont \textbf{LỚP} CH03 \hspace{1cm} \textbf{NHÓM} 7 \hspace{1cm} \textbf{HK 252}}
-    
-    \vspace{0.3cm}
-    
-    {\fontsize{13}{16}\selectfont \textbf{Giảng viên hướng dẫn:} TS. NGUYỄN THỊ MINH HƯƠNG}
-    
-    \vspace{0.8cm}
-    
-    \begin{center}
-    \renewcommand{\arraystretch}{1.2}
-    \fontsize{11}{13}\selectfont
-    \begin{tabular}{|c|l|c|c|c|c|}
-        \hline
-        \textbf{Stt} & \textbf{Học viên thực hiện} & \textbf{ID} & \textbf{Xếp loại} & \textbf{Nhiệm vụ} & \textbf{Điểm số} \\
-        \hline
-        1 & Nguyễn Thế Dân & 2470158 & & & \\
-        \hline
-        2 & Nguyễn Tấn Phát & 2570289 & & & \\
-        \hline
-        3 & Huỳnh Thị Như Quỳnh & 2570311 & & & \\
-        \hline
-        4 & Phan Đức Minh & 2570254 & & & \\
-        \hline
-        5 & Nguyễn Chí Thành & 2570324 & & & \\
-        \hline
-        6 & Phạm Huy Thanh & 2570317 & & & \\
-        \hline
-    \end{tabular}
-    \end{center}
-    
-    \vfill
-    
-    {\fontsize{13}{16}\selectfont \textit{Thành phố Hồ Chí Minh -- 2026}}
+    {\fontsize{16}{19}\selectfont \textbf{BÀI TẬP LỚN}}
     
     \vspace{0.5cm}
     
-    \restoregeometry
+    {\fontsize{18}{21}\selectfont \bfseries THIẾT KẾ ĐƯỜNG Ô TÔ}
+    
+    \vspace{2cm}
+    
+    \begin{tabular}{l l}
+        \textbf{Giảng viên hướng dẫn:} & ThS. Võ Thị Ánh Như \\
+        \textbf{Sinh viên thực hiện:} & Phạm Đặng Quốc \\
+        \textbf{Mã sinh viên:} & (STT: 17) \\
+        \textbf{Lớp:} & VB2 KTXD CTGT K10 \\
+    \end{tabular}
+    
+    \vfill
+    
+    {\fontsize{13}{16}\selectfont \textit{Vĩnh Long, năm 2026}}
+    
 \end{titlepage}
-
-% ============ MẪu 02: BÁO CÁO KẾT QUẢ LÀM VIỆC NHÓM ============
-\newpage
-\thispagestyle{empty}
-\newgeometry{left=1.5cm, right=1.5cm, top=1cm, bottom=1cm}
-
-\begin{landscape}
-
-{\small
-\noindent
-\textbf{TRƯỜNG ĐẠI HỌC BÁCH KHOA} \hfill \textbf{Mẫu 02}\\
-KHOA KHOA HỌC ỨNG DỤNG\\
-\textbf{BỘ MÔN LÝ LUẬN CHÍNH TRỊ}
-
-\vspace{0.2cm}
-
-\begin{center}
-{\fontsize{12}{14}\selectfont \textbf{BÁO CÁO KẾT QUẢ LÀM VIỆC NHÓM VÀ BẢNG ĐIỂM BÀI TIỂU LUẬN}}\\[0.1cm]
-{\fontsize{11}{13}\selectfont Học phần: \textbf{TRIẾT HỌC (SDH)} \textit{(MSMH: AS 5113)}}
-\end{center}
-
-\vspace{0.1cm}
-
-Lớp: \underline{\hspace{0.3cm}CH03\hspace{0.3cm}} Tên nhóm: \underline{\hspace{0.3cm}Nhóm 7\hspace{0.3cm}} HK \underline{\hspace{0.3cm}252\hspace{0.3cm}} Năm học \underline{\hspace{0.3cm}2025-2026\hspace{0.3cm}}
-
-\vspace{0.1cm}
-
-Đề tài: Lịch sử triết học phương Tây: Chủ nghĩa khắc kỉ và vai trò của nó đối với đời sống xã hội
-
-\vspace{0.2cm}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{|c|c|>{\hsize=0.8\hsize}X|>{\hsize=0.4\hsize}X|>{\hsize=1.8\hsize}X|c|c|c|}
-    \hline
-    \textbf{STT} & \textbf{Mã số HV} & \textbf{Họ} & \textbf{Tên} & \textbf{Nhiệm vụ được phân công} & \textbf{Nhóm đánh giá} & \textbf{Điểm GV} & \textbf{Ký tên} \\
-    \hline
-    1 & 2470158 & Nguyễn Thế & Dân & Nhóm trưởng, viết Chương 3 & 100\% & & \\
-    \hline
-    2 & 2570317 & Phạm Huy & Thanh & Viết Chương 2, Tổng hợp, biên tập nội dung & 100\% & & \\
-    \hline
-    3 & 2570289 & Nguyễn Tấn & Phát & Viết Chương 1 & 100\% & & \\
-    \hline
-    4 & 2570311 & Huỳnh Thị Như & Quỳnh & Viết phần Mở đầu, Kết luận & 100\% & & \\
-    \hline
-    5 & 2570254 & Phan Đức & Minh & Viết Chương 1 (Quá trình hình thành) & 100\% & & \\
-    \hline
-    6 & 2570324 & Nguyễn Chí & Thành & Viết Chương 3 (Vai trò \& Liên hệ thực tiễn) & 100\% & & \\
-    \hline
-\end{tabularx}
-\end{center}
-
-\vspace{0.2cm}
-
-Họ và tên nhóm trưởng: \underline{Nguyễn Thế Dân}, Số ĐT: \dotfill Email: \dotfill
-
-Nhận xét của GV: \dotfill
-
-\vspace{0.3cm}
-
-\begin{minipage}[t]{0.45\linewidth}
-\centering
-\textbf{GIẢNG VIÊN}\\
-\textit{(Ký và ghi rõ họ, tên)}\\[1.5cm]
-TS. Nguyễn Thị Minh Hương
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.45\linewidth}
-\centering
-\textbf{NHÓM TRƯỞNG}\\
-\textit{(Ký và ghi rõ họ, tên)}\\[1.5cm]
-\end{minipage}
-
-\vspace{0.2cm}
-
-
-}
-
-\end{landscape}
-\restoregeometry
-
-% ============ MẪu 01: BẢNG ĐIỂM KHÁC 20% ============
-\newpage
-\thispagestyle{empty}
-\newgeometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
-
-\begin{landscape}
-
-{\small
-\begin{flushright}
-\textbf{Mẫu 01}
-\end{flushright}
-
-\begin{center}
-{\fontsize{12}{14}\selectfont \textbf{BẢNG ĐIỂM KHÁC (chiếm 20\% điểm học phần)}}\\[0.1cm]
-{\fontsize{11}{13}\selectfont \textbf{HỌC PHẦN: TRIẾT HỌC MM: AS 5113}}
-\end{center}
-
-\vspace{0.2cm}
-
-Lớp: \underline{\hspace{0.3cm}CH03\hspace{0.3cm}} \hspace{1cm} Nhóm: \underline{\hspace{0.3cm}7\hspace{0.3cm}} \hspace{1cm} Học kỳ \underline{\hspace{0.3cm}252\hspace{0.3cm}}
-
-\vspace{0.1cm}
-
-Nhóm trưởng: \underline{Nguyễn Thế Dân} \hspace{1cm} Số di động \dotfill Email\dotfill
-
-\vspace{0.2cm}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{|c|c|X|X|c|c|c|c|}
-    \hline
-    \textbf{Stt} & \textbf{ID} & \textbf{Họ và lót} & \textbf{Tên} & \textbf{BK\_LMS (5,0đ)} & \textbf{Chuyên cần (5,0đ)} & \textbf{Tổng 20\%} & \textbf{Ký tên} \\
-    \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} & \textbf{(5)} & \textbf{(6)} & \textbf{(7)} & \textbf{(8)} \\
-    \hline
-    1 & 2470158 & Nguyễn Thế & Dân & & & & \\
-    \hline
-    2 & 2570317 & Phạm Huy & Thanh & & & & \\
-    \hline
-    3 & 2570289 & Nguyễn Tấn & Phát & & & & \\
-    \hline
-    4 & 2570311 & Huỳnh Thị Như & Quỳnh & & & & \\
-    \hline
-    5 & 2570254 & Phan Đức & Minh & & & & \\
-    \hline
-    6 & 2570324 & Nguyễn Chí & Thành & & & & \\
-    \hline
-\end{tabularx}
-\end{center}
-
-\vspace{0.1cm}
-
-
-
-{\footnotesize Cột 5: Làm các bài tập theo quy định của giảng viên trên trang BK\_LMS.}
-
-{\footnotesize Cột 6: Đi học đầy đủ, xây dựng bài tích cực. Vắng 1 buổi học trừ 1 điểm, vắng 05 buổi cấm thi.}
-
-{\footnotesize Cột 7 = (5) + (6)}
-
-\vspace{0.3cm}
-
-\begin{flushright}
-\textit{Ngày} ......... \textit{tháng} ......... \textit{năm} .........
-
-\vspace{0.2cm}
-
-\textbf{Nhóm trưởng}\\
-\textit{(Họ tên và chữ ký)}
-
-\vspace{0.8cm}
-
-\end{flushright}
-}
-
-\end{landscape}
-\restoregeometry
-
-% ============ DANH MỤC VIẾT TẮT ============
-\newpage
-\section*{DANH MỤC CÁC TỪ VIẾT TẮT}
-\addcontentsline{toc}{section}{DANH MỤC CÁC TỪ VIẾT TẮT}
-
-\begin{tabular}{l l}
-    \textbf{CNKK} & Chủ nghĩa khắc kỷ \\
-    \textbf{TCN} & Trước Công nguyên \\
-    \textbf{CN} & Công nguyên \\
-    \textbf{Nxb} & Nhà xuất bản \\
-    \textbf{TPHCM} & Thành phố Hồ Chí Minh \\
-    \textbf{CBT} & Cognitive Behavioral Therapy (Liệu pháp Nhận thức Hành vi) \\
-\end{tabular}
 
 % ============ MỤC LỤC ============
 \newpage
 \tableofcontents
 
-% ============ MỞ ĐẦU ============
-\newpage
-\section*{MỞ ĐẦU}
-\addcontentsline{toc}{section}{MỞ ĐẦU}
-\input{chapters/00_mo_dau}
-
 % ============ NỘI DUNG ============
 \newpage
-\input{chapters/01_chuong1}
+\input{chapters/01_so_lieu}
 
 \newpage
-\input{chapters/02_chuong2}
+\input{chapters/02_tinh_toan_xe}
 
 \newpage
-\input{chapters/03_chuong3}
+\input{chapters/03_ket_cau}
 
-% ============ KẾT LUẬN ============
 \newpage
-\section*{KẾT LUẬN}
-\addcontentsline{toc}{section}{KẾT LUẬN}
 \input{chapters/04_ket_luan}
-
-% ============ TÀI LIỆU THAM KHẢO ============
-\newpage
-\section*{TÀI LIỆU THAM KHẢO}
-\addcontentsline{toc}{section}{TÀI LIỆU THAM KHẢO}
-\input{chapters/05_tltk}
 
 \end{document}

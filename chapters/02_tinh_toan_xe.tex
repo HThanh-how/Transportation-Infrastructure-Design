@@ -1,0 +1,59 @@
+\section{TÍNH TOÁN LƯU LƯỢNG XE THIẾT KẾ}
+
+\subsection{Quy đổi số trục xe}
+Do không có số liệu cụ thể từ Phụ lục D - TCCS 38:2022, bài làm sử dụng các hệ số quy đổi tương đương tham khảo cho trục xe tiêu chuẩn 100 kN theo 22 TCN 211-06.
+
+Giả định hệ số quy đổi ($n_i$) cho từng loại xe như sau:
+\begin{itemize}
+    \item Xe con: 0
+    \item Xe buýt nhỏ: 0.2
+    \item Xe buýt lớn: 1.0
+    \item Xe tải nhẹ: 0.2
+    \item Xe tải vừa: 1.5
+    \item Xe tải nặng 3 trục: 2.5
+\end{itemize}
+
+Lưu lượng xe quy đổi ngày đêm ($N_{qd}$) được tính toán:
+
+$$ N_{qd} = \sum_{i=1}^{k} n_i \cdot k_i $$
+Trong đó $n_i$ là số lượng xe loại $i$.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|l|c|c|c|}
+\hline
+\textbf{STT} & \textbf{Loại xe} & \textbf{Số lượng ($n_i$)} & \textbf{Hệ số} & \textbf{Quy đổi} \\
+\hline
+1 & Xe con & 1761 & 0.0 & 0.0 \\
+2 & Xe buýt nhỏ & 207 & 0.2 & 41.4 \\
+3 & Xe buýt lớn & 44 & 1.0 & 44.0 \\
+4 & Xe tải nhẹ & 303 & 0.2 & 60.6 \\
+5 & Xe tải vừa & 283 & 1.5 & 424.5 \\
+6 & Xe tải nặng 3 trục & 199 & 2.5 & 497.5 \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Tổng ($N_{qd}$)}} & \textbf{1068} \\
+\hline
+\end{tabular}
+\caption{Bảng tính toán lưu lượng xe quy đổi về trục tiêu chuẩn 100kN}
+\end{table}
+
+\subsection{Lưu lượng thiết kế trên làn xe}
+Đường cấp II đồng bằng, 4 làn xe (mỗi chiều 2 làn).
+\begin{itemize}
+    \item Hệ số phân bố theo chiều xe chạy: $f_d = 0.5$.
+    \item Hệ số phân bố theo làn xe (làn chủ yếu): $f_l = 0.85$ (tham khảo).
+\end{itemize}
+
+Lưu lượng thiết kế ngày đêm trên làn tính toán $N_{tt}$:
+$$ N_{tt} = N_{qd} \cdot f_d \cdot f_l = 1068 \cdot 0.5 \cdot 0.85 \approx 454 \text{ (trục/ngày đêm)} $$
+
+\subsection{Tổng lưu lượng tích lũy ($N_{e}$)}
+Thời gian tính toán $T = 15$ năm, tỷ lệ tăng trưởng $q = 6\% = 0.06$.
+
+Số trục xe tính toán tích lũy trong thời hạn thiết kế:
+$$ N_e = 365 \cdot N_{tt} \cdot \frac{(1+q)^T - 1}{q} $$
+$$ N_e = 365 \cdot 454 \cdot \frac{(1+0.06)^{15} - 1}{0.06} $$
+$$ N_e = 165710 \cdot \frac{2.396 - 1}{0.06} $$
+$$ N_e = 165710 \cdot 23.27 \approx 3.86 \times 10^6 \text{ (trục)} $$
+
+Với $N_e \approx 3.86 \times 10^6$ trục, đường thuộc cấp lưu lượng lớn (loại A1).

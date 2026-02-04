@@ -1,32 +1,11 @@
 // List of slide files in order
 const slidesList = [
-    'sections/00_cover.html',
-    'sections/01_toc.html',
-    'sections/02_intro_context.html',
-    'sections/03_intro_relevance.html',
-    'sections/04_history_socrates.html',
-    'sections/05_history_heraclitus.html',
-    'sections/06_history_early.html',
-    'sections/07_history_middle.html',
-    'sections/08_history_late.html',
-    'sections/09_ontology_monism.html',
-    'sections/10_ontology_pantheism.html',
-    'sections/11_ontology_determinism.html',
-    'sections/12_ontology_compatibilism.html',
-    'sections/13_epistemology_process.html',
-    'sections/14_epistemology_katalepsis.html',
-    'sections/15_logic_comparison.html',
-    'sections/16_ethics_goal.html',
-    'sections/17_ethics_good_bad.html',
-    'sections/18_ethics_oikeiosis.html',
-    'sections/19_ethics_passions.html',
-    'sections/20_ethics_control.html',
-    'sections/21_values_cosmopolitanism.html',
-    'sections/22_values_resilience.html',
-    'sections/23_limitations.html',
-    'sections/24_modern_cbt.html',
-    'sections/25_conclusion.html',
-    'sections/26_thank_you.html'
+    'sections/slide_01_cover.html',
+    'sections/slide_02_input.html',
+    'sections/slide_03_traffic.html',
+    'sections/slide_04_cumulative.html',
+    'sections/slide_05_structure.html',
+    'sections/slide_06_conclusion.html'
 ];
 
 const wrapper = document.getElementById('slides_wrapper');
