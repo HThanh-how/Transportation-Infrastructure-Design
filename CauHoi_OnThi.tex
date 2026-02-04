@@ -1,0 +1,206 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{amsmath}
+
+% Define colors
+\definecolor{bkblue}{RGB}{0,102,153}
+
+% Formatting
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+% Geometry
+\geometry{a4paper, left=2.5cm, right=2.0cm, top=2cm, bottom=2cm}
+
+% Font size
+\renewcommand{\normalsize}{\fontsize{13pt}{15.6pt}\selectfont}
+\normalsize
+\linespread{1.3}
+
+\titleformat{\section}{\normalfont\fontsize{14}{17}\bfseries}{Câu \thesection.}{0.5em}{}
+
+\begin{document}
+
+% ============ TRANG BÌA (AESTHETIC) ============
+\begin{titlepage}
+    \newgeometry{left=1.5cm, right=1.5cm, top=1cm, bottom=1cm}
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[bkblue, line width=2pt] ([shift={(0.8cm,-0.8cm)}]current page.north west) rectangle ([shift={(-0.8cm,0.8cm)}]current page.south east);
+        \draw[bkblue, line width=0.5pt] ([shift={(1cm,-1cm)}]current page.north west) rectangle ([shift={(-1cm,1cm)}]current page.south east);
+    \end{tikzpicture}
+    
+    \centering
+    \vspace*{0.5cm}
+    {\fontsize{14}{17}\selectfont \textbf{TRƯỜNG ĐẠI HỌC CỬU LONG}}
+    \vspace{3cm}
+    {\fontsize{18}{21}\selectfont \textbf{\color{bkblue}CÂU HỎI ÔN TẬP}}
+    \vspace{0.5cm}
+    {\fontsize{20}{24}\selectfont \bfseries THIẾT KẾ ĐƯỜNG Ô TÔ}
+    \vspace{2cm}
+    
+    \begin{tabular}{l l}
+        \textbf{Sinh viên:} & Phạm Đặng Quốc \\
+        \textbf{Lớp:} & VB2 KTXD CTGT K10 \\
+    \end{tabular}
+    \vfill
+    {\fontsize{13}{16}\selectfont \textit{Vĩnh Long, năm 2026}}
+    \restoregeometry
+\end{titlepage}
+
+\newpage
+
+\section{Trình bày khái niệm, những nguyên tắc cơ bản khi vạch tuyến trên bình đồ, đường dẫn hướng tuyến và phương pháp thiết kế bình đồ tuyến?}
+\textbf{Khái niệm:} Bình đồ tuyến là hình chiếu bằng của tim đường lên mặt phẳng nằm ngang.
+
+\textbf{Nguyên tắc vạch tuyến:}
+\begin{enumerate}
+    \item Tuyến đường phải đi qua các điểm khống chế bắt buộc (đầu, cuối, điểm trung gian quan trọng).
+    \item Hướng tuyến phải ngắn nhất có thể nhưng phải phù hợp với địa hình (đi nương theo địa hình).
+    \item Phối hợp tốt giữa đường bằng và đường cong để đảm bảo xe chạy êm thuận và an toàn.
+    \item Tránh các vùng địa chất xấu, ngập lụt, sạt lở.
+    \item Đảm bảo mỹ quan và hòa hợp với cảnh quan môi trường.
+\end{enumerate}
+
+\textbf{Đường dẫn hướng tuyến:} Là đường gãy khúc nối các điểm khống chế trên bình đồ, dùng làm cơ sở để cắm tuyến chi tiết.
+
+\textbf{Phương pháp thiết kế:} Có hai phương pháp chính:
+\begin{itemize}
+    \item \textit{Phương pháp đi bao:} Vòng tránh chướng ngại vật (thường dùng ở vùng đồi núi).
+    \item \textit{Phương pháp đi cắt:} Cắt qua chướng ngại vật (đào sâu đắp cao, thường dùng ở đồng bằng hoặc khi cần rút ngắn tuyến).
+\end{itemize}
+
+\section{Khái niệm siêu cao, cấu tạo siêu cao, đoạn nối siêu cao và phương pháp thực hiện siêu cao. Phân tích ưu, nhược điểm của các phương pháp thực hiện siêu cao.}
+\textbf{Khái niệm:} Siêu cao là độ dốc ngang một mái của mặt đường hướng vào tâm đường cong, nhằm triệt tiêu lực ly tâm khi xe chạy vào đường cong, giúp xe chạy ổn định và an toàn.
+
+\textbf{Cấu tạo:} Gồm phần mặt đường và lề đường được nâng cao phía lưng đường cong. Độ dốc siêu cao ($i_{sc}$) thường từ 2\% đến 8\%.
+
+\textbf{Đoạn nối siêu cao:} Là đoạn chuyển tiếp từ độ dốc ngang bình thường (hai mái) sang độ dốc một mái (siêu cao). Chiều dài đoạn nối thường trùng với chiều dài đường cong chuyển tiếp ($L_{cd}$).
+
+\textbf{Phương pháp thực hiện:}
+\begin{itemize}
+    \item \textit{Quay quanh tim đường:} Giữ nguyên cao độ tim, nâng mép ngoài, hạ mép trong.
+        \begin{itemize}
+            \item \textit{Ưu:} Khối lượng đào đắp cân bằng, dễ thoát nước tạm thời.
+            \item \textit{Nhược:} Mép trong bị hạ thấp có thể gây đọng nước rãnh biên hoặc khó khăn thoát nước.
+        \end{itemize}
+    \item \textit{Quay quanh mép trong:} Giữ nguyên cao độ mép trong, nâng tim và mép ngoài.
+        \begin{itemize}
+            \item \textit{Ưu:} Đảm bảo thoát nước tốt.
+            \item \textit{Nhược:} Khối lượng đắp tăng thêm.
+        \end{itemize}
+    \item \textit{Quay quanh mép ngoài:} (Ít dùng).
+\end{itemize}
+
+\section{Nêu yêu cầu và nguyên tắc cơ bản khi thiết kế trắc dọc, phương pháp thiết kế trắc dọc đường ôtô?}
+\textbf{Khái niệm:} Trắc dọc là hình chiếu khai triển của tim đường lên mặt phẳng thẳng đứng.
+
+\textbf{Yêu cầu và Nguyên tắc:}
+\begin{enumerate}
+    \item Đảm bảo độ dốc dọc $i_{doc}$ không vượt quá $i_{max}$ quy định theo cấp đường và tốc độ thiết kế.
+    \item Thiết kế "đường đỏ" (cao độ thiết kế) phải phù hợp với địa hình, cân bằng khối lượng đào đắp (nếu có thể).
+    \item Đảm bảo cao độ nền đường cao hơn mực nước ngập thiết kế và mực nước ngầm.
+    \item Phối hợp tốt giữa trắc dọc và bình đồ (tuyến không gian). Tránh "gãy khúc" hoặc kết hợp xấu (ví dụ: đáy đường cong đứng trùng đáy đường cong bằng).
+\end{enumerate}
+
+\textbf{Phương pháp thiết kế:}
+\begin{itemize}
+    \item Đường bao: Đi bám sát đường đen (cao độ tự nhiên) để giảm khối lượng đào đắp (thường dùng cho đường cấp thấp, đồi núi).
+    \item Đường cắt: Cắt qua các đỉnh đồi và lấp các thung lũng để đảm bảo độ dốc êm thuận (thường dùng cho đường cấp cao).
+\end{itemize}
+
+\section{Thế nào là đường cong đứng? Nêu cách tính toán và cắm đường cong đứng?}
+\textbf{Khái niệm:} Đường cong đứng là đường cong dùng để nối hai đoạn độ dốc dọc khác nhau trên trắc dọc, giúp xe chạy êm thuận khi chuyển đổi độ dốc. Có hai loại: đường cong đứng lồi và đường cong đứng lõm.
+
+\textbf{Cách tính toán:}
+\begin{itemize}
+    \item Xác định hiệu đại số độ dốc: $\omega = |i_1 - i_2|$.
+    \item Chọn bán kính đường cong đứng $R$ (theo quy trình).
+    \item Tính chiều dài đường cong: $K = R \cdot \omega$.
+    \item Tính tiếp tuyến: $T = K / 2$.
+    \item Tính độ phân cự (khoảng cách từ đỉnh góc dốc đến đường cong): $E = T^2 / (2R)$.
+\end{itemize}
+
+\textbf{Cắm đường cong:} Tại mỗi điểm cách đầu đường cong một khoảng $x$, cao độ đường đỏ được hiệu chỉnh một lượng $y = x^2 / (2R)$ (trừ đi nếu lồi, cộng vào nếu lõm).
+
+\section{Phân tích độ dốc dọc của đường trên trắc dọc?}
+Độ dốc dọc ($i_{doc}$) ảnh hưởng trực tiếp đến khả năng leo dốc, tốc độ và an toàn của xe.
+\begin{itemize}
+    \item \textbf{Độ dốc lớn nhất ($i_{max}$):} Giới hạn để xe có thể leo dốc với tốc độ tính toán tối thiểu mà không bị tụt dốc hoặc nóng máy sôi nước. Đường cấp càng cao thì $i_{max}$ càng nhỏ.
+    \item \textbf{Chiều dài dốc cực đại:} Nếu dốc dài thì phải giảm độ dốc để xe không bị mệt mỏi máy.
+    \item \textbf{Độ dốc nhỏ nhất ($i_{min}$):} Thường quy định $\ge 0.5\%$ để đảm bảo thoát nước dọc trong rãnh biên (đặc biệt là đoạn đào).
+\end{itemize}
+
+\section{Nêu cách tính toán và cắm đường cong đứng như thế nào?}
+\textit{(Câu này lặp lại ý của câu 4. Trả lời bổ sung chi tiết về thực tế).}
+Trong thực tế hồ sơ:
+\begin{enumerate}
+    \item Dựa vào $i_1, i_2$ trên trắc dọc.
+    \item Chọn $R$ theo TCVN 4054:05 (Ví dụ $R_{loi\_min} = 1000m$, $R_{lom\_min} = 450m$ cho đường cấp IV).
+    \item Tính $K, T, E$.
+    \item Xác định lý trình điểm đầu ($TD = D - T$), điểm cuối ($TC = D + T$).
+    \item Cao độ thiết kế tại cọc trong phạm vi đường cong đứng = Cao độ tiếp tuyến $\pm y$ (lồi là $-$, lõm là $+$).
+\end{enumerate}
+
+\section{Phân tích đặc điểm chuyển động của ô tô khi vào đường cong?}
+Khi ô tô chạy vào đường cong bằng, sẽ chịu tác dụng của \textbf{lực ly tâm} ($C$).
+\begin{itemize}
+    \item Lực $C = \frac{m v^2}{R}$ có xu hướng đẩy xe trượt ra phía ngoài lưng đường cong hoặc làm lật xe.
+    \item Để chống lại lực này:
+        \begin{itemize}
+            \item Tạo ma sát ngang giữa bánh xe và mặt đường ($\mu$).
+            \item Làm siêu cao ($i_{sc}$) để trọng lượng xe ($G$) tạo ra thành phần giữ xe lại hướng vào tâm.
+        \end{itemize}
+    \item Điều kiện ổn định trượt: $\mu + i_{sc} \ge \frac{v^2}{127R}$.
+    \item Điều kiện ổn định lật: $b/2h \ge \frac{v^2}{127R} - i_{sc}$.
+\end{itemize}
+
+\section{Trình bày tính toán chiều dày lớp kết cấu nền mặt đường theo tiêu chuẩn độ võng đàn hồi?}
+Đây là bài toán xác định chiều dày sao cho Mô đun đàn hồi chung của kết cấu ($E_{chung}$) lớn hơn hoặc bằng Mô đun đàn hồi yêu cầu ($E_{yc}$).
+
+\textbf{Quy trình:}
+\begin{itemize}
+    \item Tính $E_{yc}$ dựa trên lưu lượng xe tích lũy ($N_e$) và cấp đường.
+    \item Giả định các lớp vật liệu trên (chiều dày $h_i$, mô đun $E_i$).
+    \item Tính toán lớp móng dưới cùng (lớp đất nền có $E_0$).
+    \item Sử dụng biểu đồ hoặc công thức bán không gian vô hạn nhiều lớp để tính $E_{chung}$ tại bề mặt.
+    \item Kiểm tra: $E_{chung} \cdot k_{du\_tru} \ge E_{yc}$.
+\end{itemize}
+
+\section{Trình bày tính toán theo tiêu chuẩn chịu cắt trượt?}
+Mục tiêu là đảm bảo ứng suất cắt hoạt động ($T_{ax}$) trong nền đất và các lớp vật liệu rời (cấp phối đá dăm, cát) không vượt quá sức kháng cắt cho phép ($T_{cp}$).
+
+\textbf{Công thức kiểm tra:}
+$$ T_{ax} \le \frac{C_{tt} + \sigma_{ax} \cdot \tan(\varphi_{tt})}{K_{dc}} $$
+Trong đó:
+\begin{itemize}
+    \item $T_{ax}$: Ứng suất cắt sinh ra do tải trọng bánh xe (tính toán dựa trên lý thuyết đàn hồi).
+    \item $C, \varphi$: Lực dính và góc nội ma sát của vật liệu (giá trị tính toán).
+    \item $K_{dc}$: Hệ số dự trữ về cường độ.
+\end{itemize}
+Nếu không thỏa, phải tăng chiều dày các lớp phía trên để giảm ứng suất truyền xuống lớp vật liệu yếu này.
+
+\section{Trình bày tính toán theo tiêu chuẩn chịu kéo uốn?}
+Mục tiêu là đảm bảo ứng suất kéo uốn ($\sigma_{ku}$) sinh ra ở đáy các lớp vật liệu liền khối (Bê tông nhựa, đá gia cố xi măng) không vượt quá cường độ chịu kéo uốn cho phép ($R_{ku}$).
+
+\textbf{Công thức kiểm tra:}
+$$ \sigma_{ku} \le R_{ku} = \frac{R_{u\_tt}}{K_{du\_tru}} $$
+Trong đó:
+\begin{itemize}
+    \item $\sigma_{ku}$: Tính toán based on bề dày và E của các lớp.
+    \item $R_{u\_tt}$: Cường độ chịu kéo uốn tính toán của vật liệu (phụ thuộc vào $N_e$ và loại vật liệu).
+\end{itemize}
+Đây là tiêu chí quan trọng nhất đối với lớp bê tông nhựa để chống nứt mỏi dưới tác dụng lặp lại của tải trọng xe.
+
+\end{document}
