@@ -1,13 +1,15 @@
 \documentclass[12pt,a4paper]{article}
 
-% Packages
+% XeLaTeX packages for Vietnamese
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+% Other packages
 \usepackage{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T5]{fontenc}
-\usepackage{mathptmx} % Times New Roman equivalent
-\usepackage{helvet}   % Helvetica (Arial equivalent)
-\usepackage{courier}  % Courier New equivalent
-\usepackage[vietnamese]{babel}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{tabularx}
@@ -51,7 +53,7 @@
 
 \begin{document}
 
-% ============ TRANG BÌA (AESTHETIC RESTORED) ============
+% ============ TRANG BÌA ============
 \begin{titlepage}
     \newgeometry{left=1.5cm, right=1.5cm, top=1cm, bottom=1cm}
     
@@ -80,11 +82,14 @@
     
     {\color{bkblue} \textbf{------}}
     
-    \vspace{1.5cm}
+    \vspace{2cm}
     
-    \includegraphics[height=3cm]{images/logo_bk.png} % Ensure this logo exists or remove
+    % Logo placeholder - add logo to images/logo_bk.png if needed
+    % \includegraphics[height=3cm]{images/logo_bk.png}
     
-    \vspace{1.5cm}
+    {\fontsize{24}{28}\selectfont \textbf{\color{bkblue}⚙}}
+    
+    \vspace{2cm}
     
     {\fontsize{18}{21}\selectfont \textbf{\color{bkblue}BÀI TẬP QUÁ TRÌNH}}
     

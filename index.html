@@ -12,17 +12,29 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/slides.css">
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
 </head>
 
 <body>
 
     <!-- Loading Indicator -->
     <div id="loading"
-        style="position: fixed; inset: 0; background: #000; color: white; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+        style="position: fixed; inset: 0; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: white; display: flex; align-items: center; justify-content: center; z-index: 9999;">
         <div style="text-align: center;">
-            <i class="fa-solid fa-spinner fa-spin" style="font-size: 3rem; margin-bottom: 20px;"></i>
-            <h2>Đang tải bài thuyết trình...</h2>
-            <p id="loading-text" style="color: #888;">Nếu chầm, hãy đảm bảo bạn đang chạy file này bằng
+            <div class="loader-spinner"></div>
+            <h2 style="margin-top: 30px; font-weight: 600;">Đang tải bài thuyết trình...</h2>
+            <p id="loading-text" style="color: #888;">Nếu chậm, hãy đảm bảo bạn đang chạy file này bằng
                 <b>start_presentation.bat</b>
             </p>
         </div>
@@ -33,9 +45,12 @@
 
     <!-- Controls -->
     <div id="controls">
-        <button class="btn" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="btn" onclick="togglePresentation()"><i class="fa-solid fa-play"></i></button>
-        <button class="btn" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="btn" onclick="prevSlide()" title="Slide trước (←)"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn" onclick="togglePresentation()" title="Bật/Tắt chế độ trình chiếu (F)"><i
+                class="fa-solid fa-play"></i></button>
+        <button class="btn" onclick="nextSlide()" title="Slide tiếp (→)"><i
+                class="fa-solid fa-chevron-right"></i></button>
     </div>
 
     <!-- Counter -->

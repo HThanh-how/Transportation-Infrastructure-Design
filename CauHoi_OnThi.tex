@@ -1,11 +1,15 @@
 \documentclass[12pt,a4paper]{article}
 
-% Packages
+% XeLaTeX packages for Vietnamese
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+% Other packages
 \usepackage{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T5]{fontenc}
-\usepackage{mathptmx}
-\usepackage[vietnamese]{babel}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
@@ -30,7 +34,7 @@
 
 \begin{document}
 
-% ============ TRANG BÌA (AESTHETIC) ============
+% ============ TRANG BÌA ============
 \begin{titlepage}
     \newgeometry{left=1.5cm, right=1.5cm, top=1cm, bottom=1cm}
     \begin{tikzpicture}[remember picture, overlay]

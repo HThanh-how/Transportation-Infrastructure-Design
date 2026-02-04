@@ -1,25 +1,32 @@
 <div class="slide-container">
     <div class="slide-header">
-        <h2>LƯU LƯỢNG TÍNH TOÁN</h2>
+        <h2>Lưu Lượng Tính Toán</h2>
     </div>
     <div class="slide-content">
-        <h3>2. Lưu lượng thiết kế trên làn ($N_{tt}$)</h3>
-        <ul>
-            <li>Hệ số phân bố chiều: $f_d = 0.5$</li>
-            <li>Hệ số làn xe: $f_l = 0.85$</li>
-        </ul>
-        <div class="formula-box">
-            $$ N_{tt} = 1068 \times 0.5 \times 0.85 \approx 454 \text{ (trục/ngày)} $$
-        </div>
-
-        <h3>3. Tổng lưu lượng tích lũy 15 năm ($N_e$)</h3>
-        <div class="formula-box">
-            $$ N_e = 365 \times N_{tt} \times \frac{(1+q)^{15}-1}{q} $$
-            $$ N_e = 365 \times 454 \times 23.27 \approx 3.86 \times 10^6 \text{ (trục)} $$
+        <div class="columns">
+            <div class="col">
+                <h3>2. Lưu lượng thiết kế trên làn \((N_{tt})\)</h3>
+                <ul>
+                    <li>Hệ số phân bố chiều: \(f_d = 0.5\)</li>
+                    <li>Hệ số làn xe: \(f_l = 0.85\)</li>
+                </ul>
+                <div class="formula-box">
+                    \[ N_{tt} = N_{qd} \times f_d \times f_l \]
+                    \[ N_{tt} = 1068 \times 0.5 \times 0.85 = \mathbf{454} \text{ (trục/ngày)} \]
+                </div>
+            </div>
+            <div class="col">
+                <h3>3. Tổng lưu lượng tích lũy 15 năm \((N_e)\)</h3>
+                <div class="formula-box">
+                    \[ N_e = 365 \times N_{tt} \times \frac{(1+q)^{T}-1}{q} \]
+                    \[ N_e = 365 \times 454 \times \frac{(1.06)^{15}-1}{0.06} \]
+                    \[ N_e = \mathbf{3.86 \times 10^6} \text{ (trục)} \]
+                </div>
+            </div>
         </div>
 
         <div class="alert-box">
-            &rArr; Đường cấp A1 (Lưu lượng lớn)
+            <i class="fa-solid fa-circle-check"></i> Đường cấp A1 - Lưu lượng lớn (&gt; 10⁶ trục tiêu chuẩn)
         </div>
     </div>
 </div>
