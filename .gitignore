@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.out
+*.toc
+*.lot
+*.lof
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+!Milestone_3_Report.pdf
+dist/

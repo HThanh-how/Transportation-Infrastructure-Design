@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chủ nghĩa Khắc Kỷ - AS 5113</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Urbanist:wght@400;700;800&family=Azeret+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/slides.css">
+</head>
+
+<body>
+
+    <!-- Loading Indicator -->
+    <div id="loading"
+        style="position: fixed; inset: 0; background: #000; color: white; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+        <div style="text-align: center;">
+            <i class="fa-solid fa-spinner fa-spin" style="font-size: 3rem; margin-bottom: 20px;"></i>
+            <h2>Đang tải bài thuyết trình...</h2>
+            <p id="loading-text" style="color: #888;">Nếu chầm, hãy đảm bảo bạn đang chạy file này bằng
+                <b>start_presentation.bat</b>
+            </p>
+        </div>
+    </div>
+
+    <!-- Slides will be injected here -->
+    <main id="slides_wrapper"></main>
+
+    <!-- Controls -->
+    <div id="controls">
+        <button class="btn" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn" onclick="togglePresentation()"><i class="fa-solid fa-play"></i></button>
+        <button class="btn" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Counter -->
+    <div id="counter">1 / --</div>
+
+    <script src="js/presentation.js"></script>
+</body>
+
+</html>
