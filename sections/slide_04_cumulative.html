@@ -7,26 +7,26 @@
             <div class="col">
                 <h3>2. Lưu lượng thiết kế trên làn \((N_{tt})\)</h3>
                 <ul>
-                    <li>Hệ số phân bố chiều: \(f_d = 0.5\)</li>
-                    <li>Hệ số làn xe: \(f_l = 0.85\)</li>
+                    <li>Hệ số phân bố làn xe: \(f_L = 0.35\)</li>
+                    <li>(Đường 4 làn xe, có dải phân cách giữa)</li>
                 </ul>
                 <div class="formula-box">
-                    \[ N_{tt} = N_{qd} \times f_d \times f_l \]
-                    \[ N_{tt} = 1068 \times 0.5 \times 0.85 = \mathbf{454} \text{ (trục/ngày)} \]
+                    \[ N_{tt} = N_{tk} \times f_L \]
+                    \[ N_{tt} = 552 \times 0.35 = \mathbf{193} \text{ (trục/làn.ngày đêm)} \]
                 </div>
             </div>
             <div class="col">
-                <h3>3. Tổng lưu lượng tích lũy 15 năm \((N_e)\)</h3>
+                <h3>3. Số trục xe tiêu chuẩn tích lũy 15 năm \((N_e)\)</h3>
                 <div class="formula-box">
-                    \[ N_e = 365 \times N_{tt} \times \frac{(1+q)^{T}-1}{q} \]
-                    \[ N_e = 365 \times 454 \times \frac{(1.06)^{15}-1}{0.06} \]
-                    \[ N_e = \mathbf{3.86 \times 10^6} \text{ (trục)} \]
+                    \[ N_e = \frac{(1+q)^{T}-1}{q(1+q)^{T-1}} \cdot 365 \cdot N_{tt} \]
+                    \[ N_e = 10.29 \cdot 365 \cdot 193 \approx \mathbf{724,800} \text{ (trục)} \]
                 </div>
             </div>
         </div>
 
-        <div class="alert-box">
-            <i class="fa-solid fa-circle-check"></i> Đường cấp A1 - Lưu lượng lớn (&gt; 10⁶ trục tiêu chuẩn)
+        <div class="alert-box warning">
+            <i class="fa-solid fa-exclamation-triangle"></i> \(N_e < 1 \cdot 10^6\) (Lưu lượng thấp). <br>
+                <em>Tuy nhiên đề bài yêu cầu thiết kế đường cấp II đồng bằng, tầng mặt cấp cao A1.</em>
         </div>
     </div>
 </div>

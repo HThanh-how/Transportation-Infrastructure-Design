@@ -3,62 +3,138 @@
         <h2>Tính Toán Lưu Lượng Xe</h2>
     </div>
     <div class="slide-content">
-        <h3>1. Quy đổi về trục tiêu chuẩn 100kN</h3>
-        <table class="data-table">
+        <h3>1. Tính số trục xe tính toán (\(N_{tk}\)) trên một làn xe</h3>
+        <p>Quy đổi về trục tiêu chuẩn 100kN:</p>
+        <div class="formula-box">
+            \[ N_{tk} = \sum n_i \cdot C_1 \cdot C_2 \cdot \left( \frac{P_i}{P_{tt}} \right)^4 \]
+        </div>
+
+        <table class="data-table small-text">
             <thead>
                 <tr>
+                    <th>STT</th>
                     <th>Loại xe</th>
-                    <th>Số lượng</th>
-                    <th>Hệ số quy đổi (k)</th>
-                    <th>\(N_{qd}\)</th>
+                    <th>Trục</th>
+                    <th>\(P_i\) (kN)</th>
+                    <th>\(P_{tt}\) (kN)</th>
+                    <th>\(C_1\)</th>
+                    <th>\(C_2\)</th>
+                    <th>\(n_i\)</th>
+                    <th>\(N_i\)</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Xe buýt nhỏ -->
                 <tr>
-                    <td>Xe con</td>
-                    <td>1761</td>
-                    <td>0.0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>Buýt nhỏ</td>
+                    <td rowspan="2">1</td>
+                    <td rowspan="2">Xe buýt nhỏ</td>
+                    <td>Trước</td>
+                    <td>26.4</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>6.4</td>
                     <td>207</td>
-                    <td>0.2</td>
-                    <td>41.4</td>
+                    <td>6</td>
                 </tr>
                 <tr>
-                    <td>Buýt lớn</td>
+                    <td>Sau</td>
+                    <td>45.2</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>207</td>
+                    <td>9</td>
+                </tr>
+                <!-- Xe buýt lớn -->
+                <tr>
+                    <td rowspan="2">2</td>
+                    <td rowspan="2">Xe buýt lớn</td>
+                    <td>Trước</td>
+                    <td>56</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>6.4</td>
                     <td>44</td>
-                    <td>1.0</td>
-                    <td>44.0</td>
+                    <td>28</td>
                 </tr>
                 <tr>
-                    <td>Tải nhẹ</td>
+                    <td>Sau</td>
+                    <td>95.8</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>44</td>
+                    <td>37</td>
+                </tr>
+                <!-- Xe tải nhẹ -->
+                <tr>
+                    <td rowspan="2">3</td>
+                    <td rowspan="2">Xe tải nhẹ</td>
+                    <td>Trước</td>
+                    <td>18</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>6.4</td>
                     <td>303</td>
-                    <td>0.2</td>
-                    <td>60.6</td>
+                    <td>2</td>
                 </tr>
                 <tr>
-                    <td>Tải vừa</td>
+                    <td>Sau</td>
+                    <td>56</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>303</td>
+                    <td>30</td>
+                </tr>
+                <!-- Xe tải vừa -->
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td rowspan="2">Xe tải vừa</td>
+                    <td>Trước</td>
+                    <td>25.8</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>6.4</td>
                     <td>283</td>
-                    <td>1.5</td>
-                    <td>424.5</td>
+                    <td>8</td>
                 </tr>
                 <tr>
-                    <td>Tải nặng</td>
-                    <td>199</td>
-                    <td>2.5</td>
-                    <td>497.5</td>
+                    <td>Sau</td>
+                    <td>69.6</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>283</td>
+                    <td>66</td>
                 </tr>
+                <!-- Xe tải nặng -->
+                <tr>
+                    <td rowspan="2">5</td>
+                    <td rowspan="2">Xe tải nặng</td>
+                    <td>Trước</td>
+                    <td>45.2</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>6.4</td>
+                    <td>199</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Sau</td>
+                    <td>94.2</td>
+                    <td>100</td>
+                    <td>2.2</td>
+                    <td>1</td>
+                    <td>199</td>
+                    <td>344</td>
+                </tr>
+                <!-- Tổng -->
                 <tr class="highlight">
-                    <td colspan="3"><strong>Tổng cộng (trục/ngày đêm)</strong></td>
-                    <td><strong>1068</strong></td>
+                    <td colspan="8"><strong>Tổng số trục xe tính toán \(N_{tk}\) (trục/ngày đêm)</strong></td>
+                    <td><strong>552</strong></td>
                 </tr>
             </tbody>
         </table>
-
-        <div class="formula-box">
-            \[ N_{qd} = \sum_{i=1}^{n} N_i \times k_i = 1068 \text{ (trục tiêu chuẩn/ngày đêm)} \]
-        </div>
     </div>
 </div>
