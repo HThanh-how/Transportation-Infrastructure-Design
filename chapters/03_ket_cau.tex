@@ -29,6 +29,50 @@ Căn cứ vào cấp hạng đường (Cấp II đồng bằng), số liệu đ�
 
 Tổng chiều dày kết cấu: $H = 6 + 8 + 14 + 17 + 18 = 63$ cm.
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        % Define layers with correct scaled thickness
+        % Note: Scale standard thickness (cm) to drawing units. E.g., 10cm = 1 unit.
+        
+        % Layer 1: BTNC 12.5 (6cm -> 0.6)
+        \fill[pattern=north east lines, pattern color=black!70] (0,0) rectangle (8, -0.6);
+        \draw (0,0) -- (8,0);
+        \draw (0,-0.6) -- (8,-0.6);
+        \node[anchor=west] at (8.2, -0.3) {1. BTN Chặt 12.5 - 6cm ($E=420$ MPa)};
+        
+        % Layer 2: BTNC 19 (8cm -> 0.8)
+        \fill[pattern=crosshatch dots, pattern color=black!60] (0,-0.6) rectangle (8, -1.4);
+        \draw (0,-1.4) -- (8,-1.4);
+        \node[anchor=west] at (8.2, -1.0) {2. BTN Chặt 19 - 8cm ($E=350$ MPa)};
+        
+        % Layer 3: DD GCXM (14cm -> 1.4)
+        \fill[pattern=grid, pattern color=black!40] (0,-1.4) rectangle (8, -2.8);
+        \draw (0,-2.8) -- (8,-2.8);
+        \node[anchor=west] at (8.2, -2.1) {3. Đá dăm GCXM - 14cm ($E=600$ MPa)};
+        
+        % Layer 4: CPDD I (17cm -> 1.7)
+        \fill[pattern=dots, pattern color=black!50] (0,-2.8) rectangle (8, -4.5);
+        \draw (0,-4.5) -- (8,-4.5);
+        \node[anchor=west] at (8.2, -3.65) {4. CPĐD Loại I - 17cm ($E=300$ MPa)};
+        
+        % Layer 5: CPDD II (18cm -> 1.8)
+        \fill[pattern=north west lines, pattern color=black!30] (0,-4.5) rectangle (8, -6.3);
+        \draw (0,-6.3) -- (8,-6.3);
+        \node[anchor=west] at (8.2, -5.4) {5. CPĐD Loại II - 18cm ($E=250$ MPa)};
+        
+        % Subgrade
+        \fill[gray!20] (0,-6.3) rectangle (8, -8.0);
+        \draw (0,-6.3) -- (8,-6.3);
+        \node[anchor=west] at (8.2, -7.15) {Đất nền ($E_0=40$ MPa, $K=0.98$)};
+        
+        % Dimension line
+        \draw[<->] (-1, 0) -- (-1, -6.3);
+        \node[rotate=90] at (-1.5, -3.15) {Tổng chiều dày H = 63 cm};
+    \end{tikzpicture}
+    \caption{Sơ đồ cấu tạo các lớp kết cấu áo đường mềm}
+\end{figure}
+
 \subsection{Kiểm toán độ võng đàn hồi}
 Mô đun đàn hồi yêu cầu ($E_{yc}$) đối với đường cấp II (A1) và $N_e \approx 0.72 \times 10^6$ trục.
 Theo bảng 11 (22 TCN 211-06), với đường cấp II, $E_{yc\_min} = 160$ MPa.
