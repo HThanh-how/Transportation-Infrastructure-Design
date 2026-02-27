@@ -1,41 +1,41 @@
 \section{TÍNH TOÁN LƯU LƯỢNG XE THIẾT KẾ}
 
 \subsection{Tính số trục xe tính toán (\texorpdfstring{$N_{tk}$}{Ntk}) trên một làn xe}
-Quy đổi số trục xe về trục tiêu chuẩn 100 kN theo công thức:
-$$ N_{tk} = \sum_{i=1}^{k} n_i \cdot C_1 \cdot C_2 \cdot \left( \frac{P_i}{P_{tt}} \right)^4 $$
+Quy đổi số trục xe về trục tiêu chuẩn 100 kN theo công thức tại Phụ lục A - TCCS 38:2022:
+$$ N_{tk} = \sum_{i=1}^{k} n_i \cdot C_1 \cdot C_2 \cdot \left( \frac{P_i}{P_{tt}} \right)^{4.4} $$
 
 Trong đó:
 \begin{itemize}
-    \item $P_i$: Tải trọng trục thứ $i$ của loại xe ta xét (kN).
+    \item $P_i$: Tải trọng trục thứ $i$ của loại xe ta xét (kN). Trục có $P_i < 25$ kN thì không xét khi quy đổi.
     \item $P_{tt}$: Tải trọng trục tiêu chuẩn ($P_{tt} = 100$ kN).
-    \item $C_1$: Hệ số xét đến số trục của cụm bánh xe ($C_1 = 1$ cho trục đơn, $C_1 = 1.2 \to 2.2$ cho cụm trục).
+    \item $C_1$: Hệ số xét đến số trục của cụm bánh xe ($C_1 = 1$ cho trục đơn, $C_1 = 2.2$ cho cụm trục kép).
     \item $C_2$: Hệ số xét đến số bánh xe trên một trục ($C_2 = 1$ cho bánh đôi, $C_2 = 6.4$ cho bánh đơn).
     \item $n_i$: Số lượng xe loại $i$ (xe/ngày đêm).
 \end{itemize}
 
 \begin{table}[H]
 \centering
-\caption{Bảng tính toán số trục xe tiêu chuẩn 100kN}
+\caption{Bảng tính toán số trục xe tiêu chuẩn 100kN theo TCCS 38:2022}
 \begin{tabular}{|c|l|l|c|c|c|c|c|c|}
 \hline
 \textbf{STT} & \multicolumn{2}{c|}{\textbf{Loại xe}} & \textbf{$P_i$ (kN)} & \textbf{$P_{tt}$ (kN)} & \textbf{$C_1$} & \textbf{$C_2$} & \textbf{$n_i$} & \textbf{$N_i$} \\
 \hline
-\multirow{2}{*}{1} & \multirow{2}{*}{Xe buýt nhỏ} & Trục trước & 26.4 & 100 & 1 & 6.4 & 207 & 6 \\
- & & Trục sau & 45.2 & 100 & 1 & 1 & 207 & 9 \\
+\multirow{2}{*}{1} & \multirow{2}{*}{Xe buýt nhỏ} & Trục trước & 26.4 & 100 & 1 & 6.4 & 207 & 4 \\
+ & & Trục sau & 45.2 & 100 & 1 & 1 & 207 & 7 \\
 \hline
-\multirow{2}{*}{2} & \multirow{2}{*}{Xe buýt lớn} & Trục trước & 56 & 100 & 1 & 6.4 & 44 & 28 \\
- & & Trục sau & 95.8 & 100 & 1 & 1 & 44 & 37 \\
+\multirow{2}{*}{2} & \multirow{2}{*}{Xe buýt lớn} & Trục trước & 56 & 100 & 1 & 6.4 & 44 & 23 \\
+ & & Trục sau & 95.8 & 100 & 1 & 1 & 44 & 36 \\
 \hline
-\multirow{2}{*}{3} & \multirow{2}{*}{Xe tải nhẹ} & Trục trước & 18 & 100 & 1 & 6.4 & 303 & 2 \\
- & & Trục sau & 56 & 100 & 1 & 1 & 303 & 30 \\
+\multirow{2}{*}{3} & \multirow{2}{*}{Xe tải nhẹ} & Trục trước & 18 & 100 & - & - & 303 & 0 \\
+ & & Trục sau & 56 & 100 & 1 & 1 & 303 & 25 \\
 \hline
-\multirow{2}{*}{4} & \multirow{2}{*}{Xe tải vừa} & Trục trước & 25.8 & 100 & 1 & 6.4 & 283 & 8 \\
- & & Trục sau & 69.6 & 100 & 1 & 1 & 283 & 66 \\
+\multirow{2}{*}{4} & \multirow{2}{*}{Xe tải vừa} & Trục trước & 25.8 & 100 & 1 & 6.4 & 283 & 5 \\
+ & & Trục sau & 69.6 & 100 & 1 & 1 & 283 & 58 \\
 \hline
-\multirow{2}{*}{5} & \multirow{2}{*}{Xe tải nặng} & Trục trước & 45.2 & 100 & 1 & 6.4 & 199 & 22 \\
- & & Trục sau & 94.2 & 100 & 2.2 & 1 & 199 & 344 \\
+\multirow{2}{*}{5} & \multirow{2}{*}{Xe tải nặng} & Trục trước & 45.2 & 100 & 1 & 6.4 & 199 & 43 \\
+ & & Trục sau & 94.2 & 100 & 2.2 & 1 & 199 & 337 \\
 \hline
-\multicolumn{8}{|c|}{\textbf{Tổng số trục xe sau quy đổi $N_{tk}$ (trục/ngày đêm)}} & \textbf{552} \\
+\multicolumn{8}{|c|}{\textbf{Tổng số trục xe sau quy đổi $N_{tk}$ (trục/ngày đêm)}} & \textbf{538} \\
 \hline
 \end{tabular}
 \end{table}
@@ -44,15 +44,16 @@ Trong đó:
 $$ N_{tt} = N_{tk} \cdot f_L $$
 Vì đường thiết kế có 4 làn xe và có dải phân cách giữa nên hệ số phân bố làn xe $f_L = 0.35$.
 
-$$ N_{tt} = 552 \cdot 0.35 = 193 \text{ (trục/làn.ngày đêm)} $$
+$$ N_{tt} = 538 \cdot 0.35 = 188 \text{ (trục/làn.ngày đêm)} $$
 
 \subsection{Tính số trục xe tiêu chuẩn tích lũy trong thời hạn 15 năm}
-$$ N_e = \frac{(1+q)^{T}-1}{q(1+q)^{T-1}} \cdot 365 \cdot N_{tt} $$
+Theo Phụ lục D - TCCS 38:2022:
+$$ N_{eq} = \frac{(1+q)^{T}-1}{q(1+q)^{T-1}} \cdot 365 \cdot N_{tt} $$
 Với $q = 6\% = 0.06$, $T = 15$ năm.
 
-$$ N_e = \frac{(1+0.06)^{15}-1}{0.06(1+0.06)^{14}} \cdot 365 \cdot 193 $$
-$$ N_e = 10.29 \cdot 365 \cdot 193 \approx 724,800 \text{ (trục)} $$
+$$ N_{eq} = \frac{(1+0.06)^{15}-1}{0.06(1+0.06)^{14}} \cdot 365 \cdot 188 $$
+$$ N_{eq} = 10.29 \cdot 365 \cdot 188 \approx 706,110 \text{ (trục)} $$
 
-Theo 22 TCN 211-06, với $N_e < 1 \cdot 10^6$, đây là đường có lưu lượng thấp. Tuy nhiên đề bài yêu cầu thiết kế đường cấp II đồng bằng, tầng mặt cấp cao A1.
+Theo TCCS 38:2022, với $N_{eq} < 1 \cdot 10^6$, đây là đường có lưu lượng thấp. Tuy nhiên đề bài yêu cầu thiết kế đường cấp II đồng bằng, tầng mặt cấp cao A1.
 
-\textit{Lưu ý: Kết quả $N_e$ thấp do số liệu đầu vào (lượng xe) thấp. Để đảm bảo yêu cầu thiết kế, các bước tiếp theo vẫn sẽ tính toán và kiểm tra với kết cấu mặt đường cấp cao như đề bài yêu cầu.}
+\textit{Lưu ý: Kết quả $N_{eq}$ thấp do số liệu đầu vào (lượng xe) thấp. Để đảm bảo yêu cầu thiết kế, các bước tiếp theo vẫn sẽ tính toán và kiểm tra với kết cấu mặt đường cấp cao như đề bài yêu cầu.}
