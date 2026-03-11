@@ -20,22 +20,22 @@ Trong đó:
 \hline
 \textbf{STT} & \multicolumn{2}{c|}{\textbf{Loại xe}} & \textbf{$P_i$ (kN)} & \textbf{$P_{tt}$ (kN)} & \textbf{$C_1$} & \textbf{$C_2$} & \textbf{$n_i$} & \textbf{$N_i$} \\
 \hline
-\multirow{2}{*}{1} & \multirow{2}{*}{Xe buýt nhỏ} & Trục trước & 26.4 & 100 & 1 & 6.4 & 207 & 4 \\
- & & Trục sau & 45.2 & 100 & 1 & 1 & 207 & 7 \\
+\multirow{2}{*}{1} & \multirow{2}{*}{Xe buýt loại nhỏ} & Trục trước & 26.4 & 100 & 1 & 6.4 & 504 & 9 \\
+ & & Trục sau & 45.2 & 100 & 1 & 1 & 504 & 15 \\
 \hline
-\multirow{2}{*}{2} & \multirow{2}{*}{Xe buýt lớn} & Trục trước & 56 & 100 & 1 & 6.4 & 44 & 23 \\
- & & Trục sau & 95.8 & 100 & 1 & 1 & 44 & 36 \\
+\multirow{2}{*}{2} & \multirow{2}{*}{Xe buýt loại lớn} & Trục trước & 56 & 100 & 1 & 6.4 & 48 & 24 \\
+ & & Trục sau & 95.8 & 100 & 1 & 1 & 48 & 40 \\
 \hline
-\multirow{2}{*}{3} & \multirow{2}{*}{Xe tải nhẹ} & Trục trước & 18 & 100 & - & - & 303 & 0 \\
- & & Trục sau & 56 & 100 & 1 & 1 & 303 & 25 \\
+\multirow{2}{*}{3} & \multirow{2}{*}{Xe tải loại nhẹ} & Trục trước & 18 & 100 & 1 & 6.4 & 1612 & 0 \\
+ & & Trục sau & 56 & 100 & 1 & 1 & 1612 & 126 \\
 \hline
-\multirow{2}{*}{4} & \multirow{2}{*}{Xe tải vừa} & Trục trước & 25.8 & 100 & 1 & 6.4 & 283 & 5 \\
- & & Trục sau & 69.6 & 100 & 1 & 1 & 283 & 58 \\
+\multirow{2}{*}{4} & \multirow{2}{*}{Xe tải loại vừa} & Trục trước & 25.8 & 100 & 1 & 6.4 & 1703 & 28 \\
+ & & Trục sau & 69.6 & 100 & 1 & 1 & 1703 & 346 \\
 \hline
-\multirow{2}{*}{5} & \multirow{2}{*}{Xe tải nặng} & Trục trước & 45.2 & 100 & 1 & 6.4 & 199 & 43 \\
- & & Trục sau & 94.2 & 100 & 2.2 & 1 & 199 & 337 \\
+\multirow{2}{*}{5} & \multirow{2}{*}{Xe tải loại nặng} & Trục trước & 45.2 & 100 & 1 & 6.4 & 209 & 41 \\
+ & & Trục sau & 94.2 & 100 & 2.2 & 1 & 209 & 354 \\
 \hline
-\multicolumn{8}{|c|}{\textbf{Tổng số trục xe sau quy đổi $N_{tk}$ (trục/ngày đêm)}} & \textbf{538} \\
+\multicolumn{8}{|c|}{\textbf{Tổng số trục xe sau quy đổi $N_{tk}$ (trục/ngày đêm)}} & \textbf{983} \\
 \hline
 \end{tabular}
 \end{table}
@@ -44,45 +44,54 @@ Trong đó:
     \centering
     \begin{tikzpicture}
         \begin{axis}[
-            ybar,
+            ybar=3pt,
             symbolic x coords={Buýt nhỏ, Buýt lớn, Tải nhẹ, Tải vừa, Tải nặng},
             xtick=data,
             nodes near coords,
             nodes near coords align={vertical},
-            ymin=0, ymax=450,
-            ylabel={Số trục xe tiêu chuẩn (trục/ngày đêm)},
+            ymin=0, ymax=2000,
+            ylabel={Lưu lượng (xe hoặc trục/ngày đêm)},
             xlabel={Loại xe},
-            bar width=24pt,
-            width=14cm,
-            height=8cm,
+            bar width=16pt,
+            width=15cm,
+            height=9cm,
             enlarge x limits=0.15,
-            title={Biểu đồ lưu lượng phân bố cho các loại xe},
-            grid=major
+            title={Biểu đồ kết quả tính toán lưu lượng theo 22 TCN 211-06},
+            grid=major,
+            legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1}
         ]
-        \addplot[fill=bkblue!70, draw=bkblue] coordinates {
-            (Buýt nhỏ, 11)
-            (Buýt lớn, 59)
-            (Tải nhẹ, 25)
-            (Tải vừa, 63)
-            (Tải nặng, 380)
+        \addplot[fill=red!60, draw=red] coordinates {
+            (Buýt nhỏ, 504)
+            (Buýt lớn, 48)
+            (Tải nhẹ, 1612)
+            (Tải vừa, 1703)
+            (Tải nặng, 209)
         };
+        \addplot[fill=bkblue!70, draw=bkblue] coordinates {
+            (Buýt nhỏ, 24)
+            (Buýt lớn, 64)
+            (Tải nhẹ, 126)
+            (Tải vừa, 374)
+            (Tải nặng, 395)
+        };
+        \legend{Lưu lượng thực tế ($n_i$), Lưu lượng trục quy đổi ($N_i$)}
         \end{axis}
     \end{tikzpicture}
-    \caption{Biểu đồ số trục xe tính toán quy đổi theo từng loại xe}
+    \caption{Biểu đồ phân bố lưu lượng xe và số trục quy đổi kiểu ADM}
 \end{figure}
 
 \subsection{Tính số trục xe tính toán tiêu chuẩn trên 1 làn xe \texorpdfstring{$N_{tt}$}{Ntt}}
 $$ N_{tt} = N_{tk} \cdot f_L $$
 Vì đường thiết kế có 4 làn xe và có dải phân cách giữa nên hệ số phân bố làn xe $f_L = 0.35$.
 
-$$ N_{tt} = 538 \cdot 0.35 = 188 \text{ (trục/làn.ngày đêm)} $$
+$$ N_{tt} = 983 \cdot 0.35 = 344 \text{ (trục/làn.ngày đêm)} $$
 
 \subsection{Tính số trục xe tiêu chuẩn tích lũy trong thời hạn 15 năm}
-Theo Phụ lục D - TCCS 38:2022:
+Theo Phụ lục D - TCCS 38:2022 (hoặc tương đương 22 TCN 211-06):
 $$ N_{eq} = \frac{(1+q)^{T}-1}{q(1+q)^{T-1}} \cdot 365 \cdot N_{tt} $$
 Với $q = 6\% = 0.06$, $T = 15$ năm.
 
-$$ N_{eq} = \frac{(1+0.06)^{15}-1}{0.06(1+0.06)^{14}} \cdot 365 \cdot 188 $$
-$$ N_{eq} = 10.29 \cdot 365 \cdot 188 \approx 706,110 \text{ (trục)} $$
+$$ N_{eq} = \frac{(1+0.06)^{15}-1}{0.06(1+0.06)^{14}} \cdot 365 \cdot 344 $$
+$$ N_{eq} = 10.29 \cdot 365 \cdot 344 \approx 1{,}292{,}024 \text{ (trục)} $$
 
-Theo 22 TCN 211-06, với $N_e < 1 \cdot 10^6$, đây là đường có lưu lượng thấp. Tuy nhiên đề bài yêu cầu thiết kế đường cấp II đồng bằng, tầng mặt cấp cao A1.
+Theo 22 TCN 211-06, với $N_{eq} = 1{,}292{,}024 > 1 \cdot 10^6$, đây là đường có lưu lượng vận tải ở mức cao/trung bình. Kết quả này hoàn toàn phù hợp với yêu cầu thiết kế đường cấp II đồng bằng, tầng mặt cấp cao A1.
