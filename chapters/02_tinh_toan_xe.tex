@@ -40,6 +40,37 @@ Trong đó:
 \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            symbolic x coords={Buýt nhỏ, Buýt lớn, Tải nhẹ, Tải vừa, Tải nặng},
+            xtick=data,
+            nodes near coords,
+            nodes near coords align={vertical},
+            ymin=0, ymax=450,
+            ylabel={Số trục xe tiêu chuẩn (trục/ngày đêm)},
+            xlabel={Loại xe},
+            bar width=24pt,
+            width=14cm,
+            height=8cm,
+            enlarge x limits=0.15,
+            title={Biểu đồ lưu lượng phân bố cho các loại xe},
+            grid=major
+        ]
+        \addplot[fill=bkblue!70, draw=bkblue] coordinates {
+            (Buýt nhỏ, 11)
+            (Buýt lớn, 59)
+            (Tải nhẹ, 25)
+            (Tải vừa, 63)
+            (Tải nặng, 380)
+        };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Biểu đồ số trục xe tính toán quy đổi theo từng loại xe}
+\end{figure}
+
 \subsection{Tính số trục xe tính toán tiêu chuẩn trên 1 làn xe \texorpdfstring{$N_{tt}$}{Ntt}}
 $$ N_{tt} = N_{tk} \cdot f_L $$
 Vì đường thiết kế có 4 làn xe và có dải phân cách giữa nên hệ số phân bố làn xe $f_L = 0.35$.
