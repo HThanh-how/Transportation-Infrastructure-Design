@@ -34,6 +34,13 @@ jobs:
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
 
+      - name: Compile BaiTap_KiemTraQuaTrinh (XeLaTeX)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: BaiTap_KiemTraQuaTrinh.tex
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
+
       - name: List output files
         run: ls -la *.pdf
 
@@ -44,6 +51,7 @@ jobs:
           path: |
             BaoCao_BaiTap.pdf
             CauHoi_OnThi.pdf
+            BaiTap_KiemTraQuaTrinh.pdf
 
       - name: Upload logs (always)
         if: always()
@@ -128,3 +136,4 @@ jobs:
           files: |
             dist/BaoCao_BaiTap.pdf
             dist/CauHoi_OnThi.pdf
+            dist/BaiTap_KiemTraQuaTrinh.pdf

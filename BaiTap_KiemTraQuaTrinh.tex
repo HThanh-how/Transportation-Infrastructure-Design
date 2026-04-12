@@ -1,0 +1,105 @@
+\documentclass[12pt,a4paper]{article}
+
+% Cùng bộ gói với BaoCao_BaiTap / CauHoi_OnThi (XeLaTeX + TeX Live trên CI)
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+
+\definecolor{bkblue}{RGB}{0,102,153}
+\geometry{a4paper, left=2.5cm, right=2.0cm, top=2cm, bottom=2cm}
+\renewcommand{\normalsize}{\fontsize{13pt}{15.6pt}\selectfont}
+\normalsize
+\linespread{1.25}
+
+\titleformat{\section}{\normalfont\fontsize{14}{17}\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\fontsize{13}{16}\bfseries}{\thesubsection}{0.5em}{}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\fontsize{14}{17}\selectfont \textbf{TRƯỜNG ĐẠI HỌC CỬU LONG}}
+    \vspace{2cm}
+    {\fontsize{18}{21}\selectfont \textbf{\color{bkblue}BÀI TẬP KIỂM TRA GIỮA HỌC PHẦN}}
+    \vspace{0.5cm}
+    {\fontsize{16}{20}\selectfont \bfseries ĐỘ LÚN MÓNG --- PHƯƠNG PHÁP CỘNG LÚN CÁC LỚP PHÂN TỐ}
+    \vspace{2cm}
+    \begin{tabular}{l l}
+        \textbf{Sinh viên:} & Phạm Đặng Quốc \\
+        \textbf{Lớp:} & VB2 KTXD CTGT K10 \\
+        \textbf{Ghi chú:} & $S_{tt}$ = hai số cuối mã sinh viên; ví dụ mã kết thúc bằng \ldots17 $\Rightarrow$ $N_{tc} = 20 + 17 = 37$ T. \\
+    \end{tabular}
+    \vfill
+    {\fontsize{13}{16}\selectfont \textit{Vĩnh Long, năm 2026}}
+\end{titlepage}
+
+\newpage
+
+\section{Đề bài (theo tài liệu giao)}
+Móng đơn kích thước $1{,}8 \times 2{,}2$ m; chôn sâu $h = 1{,}6$ m; tiếp nhận tải đúng tâm $N_{tc} = (20 + S_{tt})$ T. Đất nền: cát chặt trung bình, $c = 0$; $\varphi = 26^\circ$; $\gamma = 1{,}75$ T/m$^3$. Có kết quả thí nghiệm nén cố kết trong phòng (bảng dưới đây --- nếu đề in kèm bảng khác, thay số theo đề).
+
+\section{Số liệu dùng trong lời giải mẫu}
+\begin{itemize}
+    \item Diện tích đáy móng: $A = 1{,}8 \cdot 2{,}2 = 3{,}96$ m$^2$.
+    \item Giả thiết mặt nước ngầm rất sâu; ứng suất hiệu dụng trong đất: $\sigma' = \gamma \cdot z$ (tính từ mặt đất).
+    \item Tải trọng tính toán (ví dụ $S_{tt} = 17$): $N_{tc} = 37$ T. Áp lực phân bố đều đáy móng (bỏ qua trọng lượng bản thân móng trong bài mẫu):
+    \[ p_0 = \frac{N_{tc}}{A} = \frac{37}{3{,}96} \approx 9{,}34 \text{ T/m}^2. \]
+    \item Chia đất nền dưới đáy móng thành các lớp có chiều dày $h_i$; tính ứng suất thêm trung bình trong lớp do tải móng bằng công thức gần đúng phân bố 2:1 (từ đáy móng):
+    \[ \Delta\sigma_z \approx \frac{p_0\, B\, L}{(B+z)(L+z)} \]
+    với $B = 1{,}8$ m (cạnh ngắn), $L = 2{,}2$ m, $z$ là độ sâu tính từ \textbf{mặt đáy móng} đến mức đang xét.
+\end{itemize}
+
+\subsection{Bảng thí nghiệm nén (mẫu --- điền theo đề nếu khác)}
+Ứng suất hiệu dục ban đầu $\sigma'_0$ tại giữa mỗi lớp được lấy trên đường nén; hệ số nén $a = -\dfrac{de}{d\sigma'}$ (T$^{-1}$) xấp xỉ trong khoảng áp lực làm việc. Bảng mẫu:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\toprule
+\textbf{Lớp} & \textbf{Chiều dày $h_i$ (m)} & \textbf{$\sigma'_{0}$ (T/m$^2$)} & \textbf{$a$ (T$^{-1}$)} \\
+\midrule
+1 & 0{,}8 & 3{,}2 & $4{,}2 \times 10^{-3}$ \\
+2 & 0{,}8 & 4{,}6 & $3{,}6 \times 10^{-3}$ \\
+3 & 0{,}8 & 6{,}0 & $3{,}1 \times 10^{-3}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Lời giải}
+\subsection{Ứng suất thêm trong từng lớp}
+Đáy móng ở sâu $1{,}6$ m. Giữa lớp 1: $z = 0{,}4$ m từ đáy móng; lớp 2: $z = 1{,}2$ m; lớp 3: $z = 2{,}0$ m.
+
+\[ \Delta\sigma_1 \approx \frac{9{,}34 \cdot 1{,}8 \cdot 2{,}2}{(1{,}8+0{,}4)(2{,}2+0{,}4)} \approx 6{,}5 \text{ T/m}^2 \]
+\[ \Delta\sigma_2 \approx \frac{9{,}34 \cdot 3{,}96}{(3{,}0)(3{,}4)} \approx 3{,}6 \text{ T/m}^2, \qquad
+   \Delta\sigma_3 \approx \frac{9{,}34 \cdot 3{,}96}{(3{,}8)(4{,}2)} \approx 2{,}3 \text{ T/m}^2 \]
+
+\subsection{Công thức lún từng lớp (cát --- dùng hệ số nén $a$)}
+\[ s_i = \frac{a_i}{1+e_{0,i}} \cdot h_i \cdot \Delta\sigma_i \]
+Với cát, lấy $e_0 \approx 0{,}62$ (trung bình) nếu đề không cho từng lớp.
+
+\subsection{Tổng hợp (số mẫu)}
+\[ s_1 \approx \frac{4{,}2 \times 10^{-3}}{1{,}62} \cdot 0{,}8 \cdot 6{,}5 \approx 0{,}013 \text{ m} \]
+\[ s_2 \approx \frac{3{,}6 \times 10^{-3}}{1{,}62} \cdot 0{,}8 \cdot 3{,}6 \approx 0{,}006 \text{ m}, \qquad
+   s_3 \approx \frac{3{,}1 \times 10^{-3}}{1{,}62} \cdot 0{,}8 \cdot 2{,}3 \approx 0{,}004 \text{ m} \]
+
+\[ s_{\mathrm{tổng}} = s_1+s_2+s_3 \approx 0{,}023 \text{ m} \approx \mathbf{23 \text{ mm}} \]
+
+\section{Kết luận}
+Với số liệu thí nghiệm mẫu trên và $N_{tc}=37$ T, độ lún tâm móng xấp xỉ \textbf{2{,}3 cm}. Sinh viên thay $S_{tt}$, bảng nén và (nếu có) mực nước ngầm theo đề để ra kết quả cuối cùng; nộp bài kèm tên lớp, họ tên theo hướng dẫn giảng viên.
+
+\end{document}
